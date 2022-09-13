@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createStore } from 'redux';
-import reducer from './reducers/ticket-list-reducer';
+import rootReducer from './reducers/index';
 import { Provider } from 'react-redux';
 import './index.css';
 import App from './Components/App';
 import reportWebVitals from './reportWebVitals';
 
 const container = document.getElementById('root');
-const store = createStore(reducer);
+const store = createStore(rootReducer);
 
 store.subscribe(() => 
   console.log(store.getState())
